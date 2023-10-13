@@ -10,6 +10,13 @@ def index():
 
 @app.route('/post/new', methods=['GET', 'POST'])
 def new_post():
+    # ja metode ir POST mēs aizsūtīsim formas datus
+    # mēs ierakstam datus serverī
+    if flask.request.method == 'POST':
+        pass
+
+    # ja metode ir GET mēs dabūsim form
+    # nolasīsim datus no servera
     return flask.render_template('post_form.html')
 
 
